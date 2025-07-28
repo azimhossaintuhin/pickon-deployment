@@ -15,7 +15,7 @@ const useCategory = () => {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_KEY}/api/v1/categories`); // Replace with your API endpoint
+            const response = await axios.get(`/api/v1/categories`); // Replace with your API endpoint
             setCategories(response.data?.data || []);
         } catch (err: any) {
             setError(err.message || 'Failed to fetch categories');

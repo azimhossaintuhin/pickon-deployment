@@ -29,7 +29,7 @@ const baseQueryWithErrorHandling: BaseQueryFn<
     FetchBaseQueryMeta
 > = async (args:any, api:any, extraOptions:any  ) => {
     const baseQuery = fetchBaseQuery({
-        baseUrl:"../api",
+        baseUrl:"../",
         credentials: "include",
     });
 

@@ -10,11 +10,11 @@ import HomePageClient from '@/components/client/HomePageClient';
 const fetchProducts = async () => {
     try {
         const [productsResponse, bestSalesResponse] = await Promise.all([
-            fetch(`${process.env.NEXT_PUBLIC_API_KEY}/api/v1/product/list?limit=20&page=1`, {
+            fetch(`/api/v1/product/list?limit=20&page=1`, {
                 // next: { revalidate: 60 }, // Revalidate every minute
                 cache: 'no-store', // Disable caching completely
             }),
-            fetch(`${process.env.NEXT_PUBLIC_API_KEY}/api/v1/product/best-sales`, {
+            fetch(`/api/v1/product/best-sales`, {
                 // next: { revalidate: 60 }, // Revalidate every minute
                 cache: 'no-store', // Disable caching completely
             }),

@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
     try {
         const body = await request.json();
 
-        const response = await fetch(`/api/api/v1/tracking/event`, {
+        const response = await fetch(`/api/v1/tracking/event`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
